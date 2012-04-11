@@ -1,4 +1,5 @@
 #Copyright (c) 2009 Er Abhishek Parolkar, released under the MIT license
+
 module ParolkarInnovationLab
   module Inflectionist
     
@@ -32,8 +33,7 @@ end
  end
 
 
- 
-
-
-
+require File.dirname(__FILE__) + '/inflections'
+require File.dirname(__FILE__) + '/string_ext'
+ActiveSupport::Inflector.send(:extend, ParolkarInnovationLab::Inflectionist)
 
